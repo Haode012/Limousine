@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    tools:context=".Admin.HomeAdminFragment">
+
+    <TextView
+        android:id="@+id/tvNoBooking3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Not Found"
+        android:textColor="@color/admin"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/user_details_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardViewDropdown" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_details_recycler_view"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_search"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="75dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Sort By"
+            android:textColor="@color/admin"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAlmost"
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/admin"
+            android:drawableTop="@drawable/ic_baseline_access_time_white_24"
+            android:elevation="2dp"
+            android:text="Almost to Upcoming"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnUpcoming"
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/admin"
+            android:drawableTop="@drawable/ic_baseline_access_time_white_24"
+            android:elevation="2dp"
+            android:text="Upcoming to Almost"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableTop="@drawable/ic_baseline_access_time_yellow2_24"
+            android:text="Upcoming to Almost"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:strokeColor="@color/admin"
+            app:strokeWidth="2dp" />
+
+        <ImageView
+            android:id="@+id/imageViewUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="90dp"
+            android:elevation="3dp"
+            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+        <ImageView
+            android:id="@+id/imageViewDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="90dp"
+            android:elevation="3dp"
+            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_details_done_recycler_view"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_search"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_text_background_admin"
+        android:drawableLeft="@drawable/ic_baseline_search_admin_24"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A9A9A9"
+        app:layout_constraintEnd_toStartOf="@+id/igbtn_filter_admin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_search2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_text_background_admin"
+        android:drawableLeft="@drawable/ic_baseline_search_admin_24"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A9A9A9"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/igbtn_filter_admin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/admin"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_requesting"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/admin"
+        android:text="Requesting"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_baseline_directions_car_24"
+        app:iconGravity="top"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/admin"
+        android:text="Completed"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_baseline_done_24"
+        app:iconGravity="top"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/igbtn_filter_admin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_text_background_admin"
+        android:src="@drawable/ic_baseline_filter_alt_admin_24"
+        app:layout_constraintBottom_toTopOf="@+id/user_details_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249318537752",
+    "firebase_url": "https://limousine-2309d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "limousine-2309d",
+    "storage_bucket": "limousine-2309d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249318537752:android:927f4181af2ef99291616d",
+        "android_client_info": {
+          "package_name": "com.example.limousine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249318537752-nn1bud73pj7jvubr8bhmo55td4rmol7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Kg78NJ-F2xcMcC_Ti2ZK29SN7Fr5w5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249318537752-nn1bud73pj7jvubr8bhmo55td4rmol7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

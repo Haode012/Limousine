@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    tools:context=".ChatRoomFragment">
+
+    <!-- Header Section: User Info -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:civ_circle_background_color="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="@color/quantum_googgreenA700"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_uid3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/et_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Unread Messages" />
+
+    </LinearLayout>
+
+    <!-- Chat Messages RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="1dp"
+        android:layout_above="@+id/layoutMessageInput"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!-- Message Input Section -->
+
+    <RelativeLayout
+        android:id="@+id/layoutMessageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/igbtn_image"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="8dp"
+            android:hint="Type Message"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A9A9A9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/igbtn_video"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_alignParentRight="false"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_toLeftOf="@id/igbtn_image"-->
+<!--            android:background="@drawable/image_button_background_user"-->
+<!--            android:src="@drawable/ic_baseline_video_library_24"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <ImageButton
+            android:id="@+id/igbtn_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="false"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/igbtn_send"
+            android:background="@drawable/image_button_background_user"
+            android:src="@drawable/ic_baseline_image_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/igbtn_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/image_button_background_user"
+            android:src="@drawable/ic_baseline_send_24"
+            android:visibility="invisible"
+            tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+        <ImageButton
+            android:id="@+id/igbtn_mic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/image_button_background_user"
+            android:src="@drawable/ic_baseline_mic_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

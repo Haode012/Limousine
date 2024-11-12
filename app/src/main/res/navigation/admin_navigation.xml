@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_navigation"
+    android:label="Home"
+    app:startDestination="@id/nav_home_admin">
+    <fragment
+        android:id="@+id/nav_home_admin"
+        android:name="com.example.limousine.Admin.HomeAdminFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_admin" >
+        <action
+            android:id="@+id/action_nav_home_admin_to_nav_preBookingDetails"
+            app:destination="@id/nav_preBookingDetails" />
+        <action
+            android:id="@+id/action_nav_home_admin_to_nav_preBookingDetailsDone"
+            app:destination="@id/nav_preBookingDetailsDone" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contacts_admin"
+        android:name="com.example.limousine.Admin.ContactsAdminFragment"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contacts_admin" >
+        <action
+            android:id="@+id/action_nav_contacts_admin_to_nav_chat_room_admin"
+            app:destination="@id/nav_chat_room_admin" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_preBookingDetails"
+        android:name="com.example.limousine.Admin.PreBookingDetailsFragment"
+        android:label="Pre-Booking Details"
+        tools:layout="@layout/fragment_pre_booking_details">
+        <action
+            android:id="@+id/action_nav_preBookingDetails_to_nav_home_admin"
+            app:destination="@id/nav_home_admin" />
+        <action
+            android:id="@+id/action_nav_preBookingDetails_to_nav_editBookingDetails"
+            app:destination="@id/nav_editBookingDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editBookingDetails"
+        android:name="com.example.limousine.Admin.EditBookingDetailsFragment"
+        android:label="Edit Booking Details"
+        tools:layout="@layout/fragment_edit_booking_details">
+        <action
+            android:id="@+id/action_nav_editBookingDetails_to_nav_preBookingDetails"
+            app:destination="@id/nav_preBookingDetails" />
+        <action
+            android:id="@+id/action_nav_editBookingDetails_to_nav_home_admin"
+            app:destination="@id/nav_home_admin" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_chat_room_admin"
+        android:name="com.example.limousine.Admin.ChatRoomAdminFragment"
+        android:label="Chat Room"
+        tools:layout="@layout/fragment_chat_room_admin" >
+        <action
+            android:id="@+id/action_nav_chat_room_admin_to_nav_contacts_admin"
+            app:destination="@id/nav_contacts_admin" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_preBookingDetailsDone"
+        android:name="com.example.limousine.Admin.PreBookingDetailsDoneFragment"
+        android:label="Pre-Booking Details"
+        tools:layout="@layout/fragment_pre_booking_details_done" >
+        <action
+            android:id="@+id/action_nav_preBookingDetailsDone_to_nav_home_admin"
+            app:destination="@id/nav_home_admin" />
+        <action
+            android:id="@+id/action_nav_preBookingDetailsDone_to_nav_editBookingDetailsDone"
+            app:destination="@id/nav_editBookingDetailsDone" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editBookingDetailsDone"
+        android:name="com.example.limousine.Admin.EditBookingDetailsDoneFragment"
+        android:label="Edit Booking Details"
+        tools:layout="@layout/fragment_edit_booking_details_done" >
+        <action
+            android:id="@+id/action_nav_editBookingDetailsDone_to_nav_preBookingDetailsDone"
+            app:destination="@id/nav_preBookingDetailsDone" />
+        <action
+            android:id="@+id/action_nav_editBookingDetailsDone_to_nav_home_admin"
+            app:destination="@id/nav_home_admin" />
+    </fragment>
+</navigation>

@@ -1,0 +1,25 @@
+<!-- res/layout/fragment_senangpay.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SenangPayFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/app_theme"
+        android:progressBackgroundTint="@color/app_theme"
+        android:progressTint="@color/app_theme" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"></WebView>
+
+</RelativeLayout>

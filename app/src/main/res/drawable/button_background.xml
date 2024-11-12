@@ -1,0 +1,4 @@
+<!-- res/drawable/button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF5733" /> <!-- Change to the overlay color you want -->
+</shape>

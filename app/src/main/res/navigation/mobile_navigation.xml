@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.limousine.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_pre_booking"
+            app:destination="@id/nav_pre_booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pre_booking"
+        android:name="com.example.limousine.PreBookingFragment"
+        android:label="Pre-Booking"
+        tools:layout="@layout/fragment_pre_booking">
+        <action
+            android:id="@+id/action_nav_pre_booking_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_pre_booking_to_nav_chat_room"
+            app:destination="@id/nav_chat_room" />
+        <action
+            android:id="@+id/action_nav_pre_booking_to_nav_vehicle"
+            app:destination="@id/nav_vehicle" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.limousine.ContactsFragment"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_nav_contacts_to_nav_chat_room"
+            app:destination="@id/nav_chat_room" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.limousine.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_editProfile"
+            app:destination="@id/nav_editProfile" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_changePassword"
+            app:destination="@id/nav_changePassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editProfile"
+        android:name="com.example.limousine.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_nav_editProfile_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_changePassword"
+        android:name="com.example.limousine.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_nav_changePassword_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_chat_room"
+        android:name="com.example.limousine.ChatRoomFragment"
+        android:label="Chat Room"
+        tools:layout="@layout/fragment_chat_room">
+        <action
+            android:id="@+id/action_nav_chat_room_to_nav_contacts"
+            app:destination="@id/nav_contacts" />
+        <action
+            android:id="@+id/action_nav_chat_room_to_nav_pre_booking"
+            app:destination="@id/nav_pre_booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_vehicle"
+        android:name="com.example.limousine.VehicleFragment"
+        android:label="Choose a vehicle"
+        tools:layout="@layout/fragment_vehicle">
+        <action
+            android:id="@+id/action_nav_vehicle_to_nav_pre_booking"
+            app:destination="@id/nav_pre_booking" />
+        <action
+            android:id="@+id/action_nav_vehicle_to_nav_payment"
+            app:destination="@id/nav_payment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_payment"
+        android:name="com.example.limousine.PaymentFragment"
+        android:label="Pre-Booking Details"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_nav_payment_to_nav_vehicle"
+            app:destination="@id/nav_vehicle" />
+        <action
+            android:id="@+id/action_nav_payment_to_nav_senangPay"
+            app:destination="@id/nav_senangPay" />
+        <action
+            android:id="@+id/action_nav_payment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_booking"
+        android:name="com.example.limousine.BookingFragment"
+        android:label="Your Booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_nav_booking_to_nav_booking_requesting"
+            app:destination="@id/nav_booking_requesting" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_booking_requesting"
+        android:name="com.example.limousine.BookingRequestingFragment"
+        android:label="Booking Requesting"
+        tools:layout="@layout/fragment_booking_requesting">
+        <action
+            android:id="@+id/action_nav_booking_requesting_to_nav_booking"
+            app:destination="@id/nav_booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_senangPay"
+        android:name="com.example.limousine.SenangPayFragment"
+        android:label="Payment Details"
+        tools:layout="@layout/fragment_senangpay">
+        <action
+            android:id="@+id/action_nav_senangPay_to_nav_payment"
+            app:destination="@id/nav_payment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f1f1"
+    tools:context=".VehicleFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_sedan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#80A9A9A9"
+                    android:drawableLeft="@drawable/sedan"
+                    android:text="Sedan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/btn_MPV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/mpv"
+                    android:text="MPV"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/btn_van"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/van"
+                    android:text="Van"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewShow"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:backgroundTint="#f3f1f1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardViewTypes">
+
+        <ImageView
+            android:id="@+id/ig_carShow"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:background="#f3f1f1"
+            android:backgroundTint="#f3f1f1"
+            app:srcCompat="@drawable/car_3pax" />
+
+        <Button
+            android:id="@+id/btn_pax"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="@color/app_theme"
+            android:drawableLeft="@drawable/ic_baseline_person_white_24"
+            android:drawablePadding="0dp"
+            android:minHeight="48dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="3"
+            android:textColor="@color/white"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/btn_luggage"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/app_theme"
+            android:drawableLeft="@drawable/ic_baseline_luggage_24"
+            android:drawablePadding="0dp"
+            android:minHeight="48dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="2"
+            android:textColor="@color/white"
+            app:iconPadding="0dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewInformation"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardViewShow">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_price10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.89"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_price4" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Type Of Vehicle"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedan"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/tv_price4"
+                    android:layout_width="5dp"
+                    android:layout_height="21dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.889"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="How many passengers?"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicle" />
+
+                <EditText
+                    android:id="@+id/et_pax"
+                    android:layout_width="70dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:hint="   pax"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#A9A9A9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="How many luggages?"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_pax" />
+
+                <EditText
+                    android:id="@+id/et_luggages"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:hint="  luggages"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#A9A9A9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <Button
+                    android:id="@+id/btn_continue2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#009dff"
+                    android:text="Continue"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_luggages" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
