@@ -1,5 +1,5 @@
 package com.example.limousine.Model
-
+//
 class BookingModel {
     var id: String = ""
     var pickUpLocation:String = ""
